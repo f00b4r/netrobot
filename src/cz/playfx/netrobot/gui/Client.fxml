@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="468.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane prefHeight="45.0" prefWidth="600.0" VBox.vgrow="NEVER">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="28.0" text="SEND MESSAGE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="Calibri" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <HBox alignment="CENTER" prefHeight="70.0" prefWidth="600.0" spacing="10.0" VBox.vgrow="NEVER">
+                    <children>
+                        <Label text="IP">
+<font>
+<Font name="Calibri" size="12.0" />
+</font></Label>
+                        <TextField fx:id="destIp" layoutX="300.24609375" layoutY="58.5" prefHeight="25.0" prefWidth="197.0" text="localhost">
+<font>
+<Font name="Calibri" size="12.0" />
+</font></TextField>
+                        <Label text="PORT">
+<font>
+<Font name="Calibri" size="12.0" />
+</font></Label>
+                        <TextField fx:id="destPort" alignment="CENTER" layoutX="14.24609375" layoutY="22.5" prefHeight="25.0" prefWidth="69.0" text="27000">
+<font>
+<Font name="Calibri" size="12.0" />
+</font></TextField>
+                        <Button mnemonicParsing="false" onAction="#actionSend" prefHeight="25.0" prefWidth="90.0" text="Send">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+<font>
+<Font name="Calibri" size="12.0" />
+</font>
+                        </Button>
+                    </children>
+                </HBox>
+                <TextArea fx:id="message" prefHeight="82.0" prefWidth="580.0" VBox.vgrow="NEVER">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </TextArea>
+                <AnchorPane prefHeight="45.0" prefWidth="600.0" VBox.vgrow="NEVER">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="28.0" text="LISTEN COMMUNICATION" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font name="Calibri" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <HBox alignment="CENTER" prefHeight="70.0" prefWidth="600.0" spacing="10.0">
+                    <children>
+                        <Label text="IP">
+<font>
+<Font name="Calibri" size="12.0" />
+</font></Label>
+                        <TextField fx:id="srcIp" layoutX="300.24609375" layoutY="58.5" prefHeight="25.0" prefWidth="197.0" text="localhost">
+<font>
+<Font name="Calibri" size="12.0" />
+</font></TextField>
+                        <Label text="PORT">
+<font>
+<Font name="Calibri" size="12.0" />
+</font></Label>
+                        <TextField fx:id="srcPort" alignment="CENTER" layoutX="14.24609375" layoutY="22.5" prefHeight="25.0" prefWidth="69.0" text="27000">
+<font>
+<Font name="Calibri" size="12.0" />
+</font></TextField>
+                        <ToggleButton fx:id="listenButton" mnemonicParsing="false" onAction="#actionListen" prefHeight="25.0" prefWidth="90.0" text="Listen">
+<font>
+<Font name="Calibri" size="12.0" />
+</font></ToggleButton>
+                    </children>
+                </HBox>
+                <TextArea fx:id="communication" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </TextArea>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
